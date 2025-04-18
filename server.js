@@ -47,6 +47,7 @@ app.get('/cancel', (req, res) => {
   res.render('cancel', { title: 'Payment Cancelled' });
 });
 
+
 // Route handler for creating a checkout session
 app.post("/create-checkout-session", async (req, res) => {
   try {
