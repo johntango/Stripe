@@ -3,6 +3,8 @@ import Stripe from 'stripe';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import dotenv from 'dotenv';
+import ejs from 'ejs';
+import { dirname } from 'path';
 
 // Load environment variables from .env file
 dotenv.config();
@@ -15,7 +17,7 @@ const app = express();
 const port = 3000; // You can change this to your preferred port number
 
 const YOUR_DOMAIN = "http://localhost:3000"; // Update this with your actual domain
-const PRICE_ID = "1234"; // Make sure to replace this with your actual Price ID
+const PRICE_ID = process.env.PRICE_ID// Make sure to replace this with your actual Price ID
 
 // Set up EJS as the view engine
 app.set('view engine', 'ejs');
